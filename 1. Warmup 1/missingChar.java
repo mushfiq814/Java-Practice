@@ -21,7 +21,7 @@ public class missingChar {
     Scanner input = new Scanner(System.in);
 
     System.out.println("Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..str.length()-1 inclusive).");
-    System.out.printl("");
+    System.out.println("");
     System.out.println("Enter a string: ");
     String str = input.nextLine();
     System.out.println("Which string index would you like to be removed?");
