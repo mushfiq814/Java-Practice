@@ -21,7 +21,7 @@ public class startHi {
     Scanner input = new Scanner(System.in);
 
     System.out.println("Given a string, return true if the string starts with 'hi' and false otherwise.");
-
+    System.out.printl("");
     System.out.println("Enter a string: ");
     String str = input.nextLine();
 
