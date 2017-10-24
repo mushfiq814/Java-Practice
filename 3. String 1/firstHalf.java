@@ -22,7 +22,6 @@ public class firstHalf {
     System.out.println("");
     System.out.println("Enter a string: ");
     String str = input.nextLine();
-    int x = input.nextInt();
 
     System.out.println(firstHalf(str));
   }

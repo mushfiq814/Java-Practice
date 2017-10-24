@@ -27,7 +27,7 @@ public class theEnd {
     System.out.println("Enter a string: ");
     String str = input.nextLine();
     System.out.println("Enter True or False.");
-    Booelan x = input.nextBoolean();
+    Boolean x = input.nextBoolean();
 
     System.out.println(theEnd(str, x));
   }

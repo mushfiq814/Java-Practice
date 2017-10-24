@@ -9,7 +9,7 @@ comboString("aaa", "b") → "baaab"
 *******************************************************************/
 
 import java.util.Scanner;
-public class altPairs {
+public class comboString {
   public static String comboString(String a, String b) {
     int m = a.length();
     int n = b.length();

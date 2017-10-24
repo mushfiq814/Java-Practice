@@ -10,7 +10,7 @@ atFirst("h") → "h@"
 *******************************************************************/
 
 import java.util.Scanner;
-public class altPairs {
+public class atFirst {
   public static String atFirst(String str) {
     int n = str.length();
     if (n>=2) return str.substring(0,2);
@@ -27,6 +27,6 @@ public class altPairs {
     System.out.println("Enter a string: ");
     String str = input.nextLine();
 
-    System.out.println(altPairs(str));
+    System.out.println(atFirst(str));
   }
 }

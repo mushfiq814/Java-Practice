@@ -9,7 +9,7 @@
 *******************************************************************/
 
 import java.util.Scanner;
-public class altPairs {
+public class helloName {
   public static String helloName(String name) {
     return "Hello " + name + "!";
   }
@@ -22,6 +22,6 @@ public class altPairs {
     System.out.println("Enter a string: ");
     String str = input.nextLine();
 
-    System.out.println(altPairs(str));
+    System.out.println(helloName(str));
   }
 }

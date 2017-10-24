@@ -20,9 +20,10 @@ public class makeOutWord {
     System.out.println("Given an 'out' string length 4, such as '<<>>', and a word, return a new string where the word is in the middle of the out string, e.g. '<<word>>'. Note: use str.substring(i, j) to extract the String starting at index i and going up to but not including index j.");
     System.out.println("");
     System.out.println("Enter a string: ");
-    String str = input.nextLine();
-    int x = input.nextInt();
+    String str1 = input.nextLine();
+    System.out.println("Enter another string: ");
+    String str2 = input.nextLine();
 
-    System.out.println(makeOutWord(str));
+    System.out.println(makeOutWord(str1, str2));
   }
 }
