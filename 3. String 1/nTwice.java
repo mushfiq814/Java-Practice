@@ -1,33 +1,30 @@
 /******************************************************************
 
+Given a string and an int n, return a string made of the first and last n chars from the string. The string length will be at least n.
+
+nTwice("Hello", 2) → "Helo"
+nTwice("Chocolate", 3) → "Choate"
+nTwice("Chocolate", 1) → "Ce"
 
 *******************************************************************/
 
 import java.util.Scanner;
-public class altPairs {
-  public static String altPairs(String str) {
-    String str2 = "";
-    int n = str.length();
-
-    if (n<=2) return str;
-
-    for (int i=0; i<n-1 ; i+=4) {
-      str2 += str.charAt(i);
-      str2 += str.charAt(i+1);
-    }
-    if ((n-1)%4==0) str2 += str.charAt(n-1);
-    return str2;
+public class nTwice {
+  public static String nTwice(String str, int n) {
+    int m = str.length();
+    return str.substring(0,n) + str.substring(m-n);
   }
 
   public static void main(String arg[]) {
     Scanner input = new Scanner(System.in);
 
-    System.out.println("");
+    System.out.println("Given a string and an int n, return a string made of the first and last n chars from the string. The string length will be at least n.");
     System.out.println("");
     System.out.println("Enter a string: ");
     String str = input.nextLine();
+    System.out.println("Enter an integer: ");
     int x = input.nextInt();
 
-    System.out.println(altPairs(str));
+    System.out.println(nTwice(str, x));
   }
 }

@@ -1,33 +1,29 @@
 /******************************************************************
 
+Given a string of even length, return a string made of the middle two chars, so the string "string" yields "ri". The string length will be at least 2.
+
+middleTwo("string") → "ri"
+middleTwo("code") → "od"
+middleTwo("Practice") → "ct"
 
 *******************************************************************/
 
 import java.util.Scanner;
-public class altPairs {
-  public static String altPairs(String str) {
-    String str2 = "";
+public class middleTwo {
+  public static String middleTwo(String str) {
     int n = str.length();
-
-    if (n<=2) return str;
-
-    for (int i=0; i<n-1 ; i+=4) {
-      str2 += str.charAt(i);
-      str2 += str.charAt(i+1);
-    }
-    if ((n-1)%4==0) str2 += str.charAt(n-1);
-    return str2;
+    int m = (n/2)-1;
+    return str.substring(m,m+2);
   }
 
   public static void main(String arg[]) {
     Scanner input = new Scanner(System.in);
 
-    System.out.println("");
+    System.out.println("Given a string of even length, return a string made of the middle two chars, so the string 'string' yields 'ri'. The string length will be at least 2.");
     System.out.println("");
     System.out.println("Enter a string: ");
     String str = input.nextLine();
-    int x = input.nextInt();
 
-    System.out.println(altPairs(str));
+    System.out.println(middleTwo(str));
   }
 }

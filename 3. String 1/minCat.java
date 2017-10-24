@@ -1,33 +1,33 @@
 /******************************************************************
 
+Given two strings, append them together (known as "concatenation") and return the result. However, if the strings are different lengths, omit chars from the longer string so it is the same length as the shorter string. So "Hello" and "Hi" yield "loHi". The strings may be any length.
+
+minCat("Hello", "Hi") → "loHi"
+minCat("Hello", "java") → "ellojava"
+minCat("java", "Hello") → "javaello"
 
 *******************************************************************/
 
 import java.util.Scanner;
-public class altPairs {
-  public static String altPairs(String str) {
-    String str2 = "";
-    int n = str.length();
+public class minCat {
+  public static String minCat(String a, String b) {
+    int m = a.length();
+    int n = b.length();
 
-    if (n<=2) return str;
-
-    for (int i=0; i<n-1 ; i+=4) {
-      str2 += str.charAt(i);
-      str2 += str.charAt(i+1);
-    }
-    if ((n-1)%4==0) str2 += str.charAt(n-1);
-    return str2;
+    if (m<n) return a + b.substring(n-m);
+    else return a.substring(m-n) + b;
   }
 
   public static void main(String arg[]) {
     Scanner input = new Scanner(System.in);
 
-    System.out.println("");
+    System.out.println("Given two strings, append them together (known as 'concatenation') and return the result. However, if the strings are different lengths, omit chars from the longer string so it is the same length as the shorter string. So 'Hello' and 'Hi' yield 'loHi'. The strings may be any length.");
     System.out.println("");
     System.out.println("Enter a string: ");
-    String str = input.nextLine();
-    int x = input.nextInt();
+    String str1 = input.nextLine();
+    System.out.println("Enter another string: ");
+    String str2 = input.nextLine();
 
-    System.out.println(altPairs(str));
+    System.out.println(minCat(str1, str2));
   }
 }

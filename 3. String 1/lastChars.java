@@ -1,33 +1,35 @@
 /******************************************************************
 
+Given 2 strings, a and b, return a new string made of the first char of a and the last char of b, so "yo" and "java" yields "ya". If either string is length 0, use '@' for its missing char.
+
+lastChars("last", "chars") → "ls"
+lastChars("yo", "java") → "ya"
+lastChars("hi", "") → "h@"
 
 *******************************************************************/
 
 import java.util.Scanner;
-public class altPairs {
-  public static String altPairs(String str) {
-    String str2 = "";
-    int n = str.length();
+public class lastChars {
+  public static String lastChars(String a, String b) {
+    int m = a.length();
+    int n = b.length();
 
-    if (n<=2) return str;
+    if (m==0) {a="@"; m=1;}
+    if (n==0) {b="@"; n=1;}
 
-    for (int i=0; i<n-1 ; i+=4) {
-      str2 += str.charAt(i);
-      str2 += str.charAt(i+1);
-    }
-    if ((n-1)%4==0) str2 += str.charAt(n-1);
-    return str2;
+    return a.substring(0,1) + b.substring(n-1);
   }
 
   public static void main(String arg[]) {
     Scanner input = new Scanner(System.in);
 
-    System.out.println("");
+    System.out.println("Given 2 strings, a and b, return a new string made of the first char of a and the last char of b, so 'yo' and 'java' yields 'ya'. If either string is length 0, use '@' for its missing char.");
     System.out.println("");
     System.out.println("Enter a string: ");
-    String str = input.nextLine();
-    int x = input.nextInt();
+    String str1 = input.nextLine();
+    System.out.println("Enter another string: ");
+    String str2 = input.nextLine();
 
-    System.out.println(altPairs(str));
+    System.out.println(lastChars(str1, str2));
   }
 }

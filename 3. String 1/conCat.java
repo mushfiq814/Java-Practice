@@ -1,28 +1,28 @@
 /******************************************************************
 
+Given two strings, append them together (known as "concatenation") and return the result.
+However, if the concatenation creates a double-char, then omit one of the chars, so "abc" and "cat" yields "abcat".
+
+conCat("abc", "cat") → "abcat"
+conCat("dog", "cat") → "dogcat"
+conCat("abc", "") → "abc"
 
 *******************************************************************/
 
 import java.util.Scanner;
 public class altPairs {
-  public static String altPairs(String str) {
-    String str2 = "";
-    int n = str.length();
+  public static String conCat(String a, String b) {
+    int m = a.length();
+    int n = b.length();
 
-    if (n<=2) return str;
-
-    for (int i=0; i<n-1 ; i+=4) {
-      str2 += str.charAt(i);
-      str2 += str.charAt(i+1);
-    }
-    if ((n-1)%4==0) str2 += str.charAt(n-1);
-    return str2;
+    if (m>0 && n >0 && a.charAt(m-1)==b.charAt(0)) return a.substring(0,m-1) + b;
+    else return a+b;
   }
 
   public static void main(String arg[]) {
     Scanner input = new Scanner(System.in);
 
-    System.out.println("");
+    System.out.println("Given two strings, append them together (known as 'concatenation') and return the result. However, if the concatenation creates a double-char, then omit one of the chars, so 'abc' and 'cat' yields 'abcat'.");
     System.out.println("");
     System.out.println("Enter a string: ");
     String str = input.nextLine();

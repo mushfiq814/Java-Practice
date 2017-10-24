@@ -9,7 +9,7 @@
 *******************************************************************/
 
 import java.util.Scanner;
-public class altPairs {
+public class makeOutWord {
   public static String makeOutWord(String out, String word) {
     return out.substring(0,2) + word + out.substring(2);
   }
@@ -23,6 +23,6 @@ public class altPairs {
     String str = input.nextLine();
     int x = input.nextInt();
 
-    System.out.println(altPairs(str));
+    System.out.println(makeOutWord(str));
   }
 }

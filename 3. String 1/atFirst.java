@@ -1,32 +1,31 @@
 /******************************************************************
 
+Given a string, return a string length 2 made of its first 2 chars.
+If the string length is less than 2, use '@' for the missing chars.
+
+atFirst("hello") → "he"
+atFirst("hi") → "hi"
+atFirst("h") → "h@"
 
 *******************************************************************/
 
 import java.util.Scanner;
 public class altPairs {
-  public static String altPairs(String str) {
-    String str2 = "";
+  public static String atFirst(String str) {
     int n = str.length();
-
-    if (n<=2) return str;
-
-    for (int i=0; i<n-1 ; i+=4) {
-      str2 += str.charAt(i);
-      str2 += str.charAt(i+1);
-    }
-    if ((n-1)%4==0) str2 += str.charAt(n-1);
-    return str2;
+    if (n>=2) return str.substring(0,2);
+    else if (n==1) return str.substring(0,1) + "@";
+    else return "@@";
   }
+
 
   public static void main(String arg[]) {
     Scanner input = new Scanner(System.in);
 
-    System.out.println("");
+    System.out.println("Given a string, return a string length 2 made of its first 2 chars. If the string length is less than 2, use '@' for the missing chars.");
     System.out.println("");
     System.out.println("Enter a string: ");
     String str = input.nextLine();
-    int x = input.nextInt();
 
     System.out.println(altPairs(str));
   }

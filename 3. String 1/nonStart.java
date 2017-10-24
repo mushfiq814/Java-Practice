@@ -9,7 +9,7 @@
 *******************************************************************/
 
 import java.util.Scanner;
-public class altPairs {
+public class nonStart {
   public static String nonStart(String a, String b) {
   return a.substring(1) + b.substring(1);
 }
@@ -21,9 +21,10 @@ public class altPairs {
     System.out.println("Given 2 strings, return their concatenation, except omit the first char of each. The strings will be at least length 1.");
     System.out.println("");
     System.out.println("Enter a string: ");
-    String str = input.nextLine();
-    int x = input.nextInt();
+    String str1 = input.nextLine();
+    System.out.println("Enter another string: ");
+    String str2 = input.nextLine();
 
-    System.out.println(altPairs(str));
+    System.out.println(nonStart(str1, str2));
   }
 }

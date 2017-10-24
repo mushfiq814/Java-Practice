@@ -21,7 +21,6 @@ public class altPairs {
     System.out.println("");
     System.out.println("Enter a string: ");
     String str = input.nextLine();
-    int x = input.nextInt();
 
     System.out.println(altPairs(str));
   }

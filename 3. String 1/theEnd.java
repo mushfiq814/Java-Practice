@@ -9,7 +9,7 @@
 *******************************************************************/
 
 import java.util.Scanner;
-public class altPairs {
+public class theEnd {
   public static String theEnd(String str, boolean front) {
     int n = str.length();
     String first = str.substring(0,1);
@@ -18,7 +18,7 @@ public class altPairs {
     if (front == true) return first;
     else return end;
   }
-  
+
   public static void main(String arg[]) {
     Scanner input = new Scanner(System.in);
 
@@ -26,8 +26,9 @@ public class altPairs {
     System.out.println("");
     System.out.println("Enter a string: ");
     String str = input.nextLine();
-    int x = input.nextInt();
+    System.out.println("Enter True or False.");
+    Booelan x = input.nextBoolean();
 
-    System.out.println(altPairs(str));
+    System.out.println(theEnd(str, x));
   }
 }

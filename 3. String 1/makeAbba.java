@@ -1,33 +1,29 @@
 /******************************************************************
 
+Given two strings, a and b, return the result of putting them together in the order abba, e.g. "Hi" and "Bye" returns "HiByeByeHi".
+
+makeAbba("Hi", "Bye") → "HiByeByeHi"
+makeAbba("Yo", "Alice") → "YoAliceAliceYo"
+makeAbba("What", "Up") → "WhatUpUpWhat"
 
 *******************************************************************/
 
 import java.util.Scanner;
-public class altPairs {
-  public static String altPairs(String str) {
-    String str2 = "";
-    int n = str.length();
-
-    if (n<=2) return str;
-
-    for (int i=0; i<n-1 ; i+=4) {
-      str2 += str.charAt(i);
-      str2 += str.charAt(i+1);
-    }
-    if ((n-1)%4==0) str2 += str.charAt(n-1);
-    return str2;
+public class makeAbba {
+  public static String makeAbba(String a, String b) {
+    return a + b + b + a;
   }
 
   public static void main(String arg[]) {
     Scanner input = new Scanner(System.in);
 
-    System.out.println("");
+    System.out.println("Given two strings, a and b, return the result of putting them together in the order abba, e.g. 'Hi' and 'Bye' returns 'HiByeByeHi'.");
     System.out.println("");
     System.out.println("Enter a string: ");
-    String str = input.nextLine();
-    int x = input.nextInt();
+    String str1 = input.nextLine();
+    System.out.println("Enter another string: ");
+    String str2 = input.nextLine();
 
-    System.out.println(altPairs(str));
+    System.out.println(makeAbba(str1, str2));
   }
 }

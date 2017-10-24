@@ -9,7 +9,7 @@ firstHalf("abcdef") → "abc"
 *******************************************************************/
 
 import java.util.Scanner;
-public class altPairs {
+public class firstHalf {
   public static String firstHalf(String str) {
     int n = str.length();
     return str.substring(0,n/2);
@@ -24,6 +24,6 @@ public class altPairs {
     String str = input.nextLine();
     int x = input.nextInt();
 
-    System.out.println(altPairs(str));
+    System.out.println(firstHalf(str));
   }
 }
